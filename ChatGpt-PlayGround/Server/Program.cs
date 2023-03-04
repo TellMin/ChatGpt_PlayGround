@@ -1,4 +1,7 @@
 using Microsoft.AspNetCore.ResponseCompression;
+using Microsoft.Extensions.DependencyInjection;
+using OpenAI.GPT3.Extensions;
+using OpenAI.GPT3.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -6,6 +9,15 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
+
+// Following line read seacrets.json and set ApiKey
+builder.Services.AddOpenAIService();
+
+builder.Services.AddResponseCompression(options =>
+{
+    options.Providers.Add<GzipCompressionProvider>();
+    options.MimeTypes = ResponseCompressionDefaults.MimeTypes.Concat(new[] { "application/octet-stream" });
+});
 
 var app = builder.Build();
 

@@ -1,4 +1,6 @@
 ﻿@page "/"
+@using OpenAI.GPT3.ObjectModels.ResponseModels;
+@inject HttpClient Http
 
 <PageTitle>Index</PageTitle>
 
@@ -7,3 +9,15 @@
 Welcome to your new app.
 
 <SurveyPrompt Title="How is Blazor working for you?" />
+
+<button class="btn btn-primary" @onclick="GetChatCompletion">Get Chat Completion</button>
+
+@code{
+
+    private ChatCompletionCreateResponse? chatCompletionCreateResponse;
+    
+    private async Task GetChatCompletion()
+    {
+        chatCompletionCreateResponse = await Http.GetFromJsonAsync<ChatCompletionCreateResponse>("api/v1/chat?message=test");
+    }
+}
