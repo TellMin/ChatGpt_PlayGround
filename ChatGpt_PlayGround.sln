@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33424.131
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatGpt-PlayGround.Server", "ChatGpt-PlayGround\Server\ChatGpt-PlayGround.Server.csproj", "{6B03B869-BF30-47B2-A3C8-62321A62BB1F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatGpt-PlayGround.Client", "ChatGpt-PlayGround\Client\ChatGpt-PlayGround.Client.csproj", "{AD0E2474-0EA1-4C1D-ADD0-AAAF32AD8A55}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatGpt-PlayGround.Shared", "ChatGpt-PlayGround\Shared\ChatGpt-PlayGround.Shared.csproj", "{EA56A945-A43B-40D8-88C6-C0D1F489E547}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6B03B869-BF30-47B2-A3C8-62321A62BB1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B03B869-BF30-47B2-A3C8-62321A62BB1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B03B869-BF30-47B2-A3C8-62321A62BB1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B03B869-BF30-47B2-A3C8-62321A62BB1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD0E2474-0EA1-4C1D-ADD0-AAAF32AD8A55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD0E2474-0EA1-4C1D-ADD0-AAAF32AD8A55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD0E2474-0EA1-4C1D-ADD0-AAAF32AD8A55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD0E2474-0EA1-4C1D-ADD0-AAAF32AD8A55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA56A945-A43B-40D8-88C6-C0D1F489E547}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA56A945-A43B-40D8-88C6-C0D1F489E547}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA56A945-A43B-40D8-88C6-C0D1F489E547}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA56A945-A43B-40D8-88C6-C0D1F489E547}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {30A1A8B3-7237-475E-85EC-81CA31350DF2}
+	EndGlobalSection
+EndGlobal
