@@ -26,24 +26,18 @@ public class GPT3Controller : Controller
     /// <param name="message"></param>
     /// <returns></returns>
     /// <exception cref="NotImplementedException"></exception>
-    [HttpGet]
+    [HttpPost]
     [Route("")]
-    public Task<ChatCompletionCreateResponse> Completion(string message)
+    public Task<ChatCompletionCreateResponse> Completion(List<ChatMessage> chatMessages)
     {
-        return SendMessage();
+        return SendMessage(chatMessages);
     }
 
-    private async Task<ChatCompletionCreateResponse> SendMessage()
+    private async Task<ChatCompletionCreateResponse> SendMessage(List<ChatMessage> chatMessages)
     {
         var completionResult = await openAIService.ChatCompletion.CreateCompletion(new ChatCompletionCreateRequest()
         {
-            Messages = new List<ChatMessage> 
-            {
-                ChatMessage.FromSystem("You are a helpful assistant."),
-                ChatMessage.FromUser("Who won the world series in 2020?"),
-                ChatMessage.FromAssistance("The Los Angeles Dodgers won the World Series in 2020."),
-                ChatMessage.FromUser("Where was it played?")
-            },
+            Messages = chatMessages,
             Model = Models.ChatGpt3_5Turbo
         });
 
@@ -53,7 +47,4 @@ public class GPT3Controller : Controller
         
         throw new InvalidOperationException();
     }
-
-
-
 }
